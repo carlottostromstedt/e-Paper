@@ -9,7 +9,7 @@ if os.path.exists(libdir):
     sys.path.append(libdir)
 
 import logging
-from waveshare_epd import vivid7
+from waveshare_epd import epd7in3e
 import time
 from PIL import Image,ImageDraw,ImageFont
 import traceback
@@ -21,7 +21,7 @@ This script will display six colors on the screen in vertical sections.
 """)
 
 # Initialize the display
-epd = vivid7.EPD()
+epd = epd7in3e.EPD()
 epd.init()
 epd.Clear()
 
