@@ -21,7 +21,7 @@ Displays solid blocks of color to clean the display of any ghosting or residual 
 """)
 
 # Initialize the display
-epd = epd7in3e.EPD()
+epd = vivid7.EPD()
 epd.init()
 
 # Command line arguments to determine number of cycles to run

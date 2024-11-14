@@ -21,7 +21,7 @@ This script will display six colors on the screen in vertical sections.
 """)
 
 # Initialize the display
-epd = epd7in3e.EPD()
+epd = vivid7.EPD()
 epd.init()
 epd.Clear()
 
