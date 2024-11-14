@@ -178,15 +178,13 @@ class EPD:
         self.ReadBusyH()
         return 0
 
-    import numpy as np
-
-    def apply_gamma(image, gamma=1.5):
+    def apply_gamma(self, image, gamma=1.5):
         gamma_correction = np.array([((i / 255.0) ** gamma) * 255 for i in range(256)]).astype("uint8")
         return Image.fromarray(gamma_correction[image])
 
     def getbuffer(self, image):
         # Gamma-correct the image before processing
-        image = apply_gamma(image)
+        image = self.apply_gamma(image)
 
         # Create a palette with 6 colors supported by the panel
         pal_image = Image.new("P", (1, 1))
